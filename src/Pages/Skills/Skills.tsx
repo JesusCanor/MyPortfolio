@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import { SectionContent } from '..';
 import { skillsData } from '../../assets/MemoryData/skillsData';
 import { SkillsInterface } from '../../DDD/domain';
+import { TechnologyCard } from '../../components/TechnologyCard';
 
 export interface SkillsProps { title: string, dark: boolean, id: string }
 
@@ -12,15 +13,17 @@ const Skills : React.FC<SkillsProps> = ({ title, dark, id }) => {
 			<SkillsStyle dark={dark}>
 				<SectionContent id={id}>
 					<Typography variant="h3">{title}</Typography>
+					+8 years of experience
 					<Grid container>
 						{ skillsData.map((data: SkillsInterface, index) => {
 								return (
 									<Grid item key={index} xs={12} sm={6} md={4}>
-										<CardSkillsStyle>
+										<TechnologyCard/>
+										{ <CardSkillsStyle>
 											<CardMedia style={{'height': '5rem', 'width': '5rem', 'margin': '1rem', }} title={data.Title} image={data.ImageSrc}/>
 											<h1>{data.Title}</h1>
 											<p>{data.Description}</p>
-										</CardSkillsStyle>
+										</CardSkillsStyle> }
 									</Grid>
 								)
 							})

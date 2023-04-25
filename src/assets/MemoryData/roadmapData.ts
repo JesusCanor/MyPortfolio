@@ -2,17 +2,23 @@ import { roadMapInterface } from "../../DDD/domain";
 
 export const roadmapData : roadMapInterface[] = [
     {
-        Technologies: ['Spring', 'Java 11', 'React', 'AWS', 'Docker', 'Python', 'DJango'],
+        Technologies: ['Spring', 'Java 11', 'React', 'AWS', 'Docker', 'Python', 'DJango', 'Angular'],
         Rol: 'FullStack Software Developer',
         CompanyName: 'Obuu',
-        Description: `<p>Nuevos desarrollos, mantenimiento y optimización de producto propio <b>Stockwatch</b>. Un software diseñado para la optimización logística</br>
-                      En esta oportunidad laboral, he podido continuar el desarrollo del producto propio consistente en <br>Optimización logística de almacenamiento.</br>
-                      Gracias a su arquitectura he podido aprender varios servicios de AWS como el API Gateway y lambda principalmente, entre otros.
-                      </p>
-                      <p>Implementación desde 0 de la arquitectura y el frontend de un software para ejecutar scripts de <b>Inteligencia artificial en Python</b></p>
-                      <p>Implementación y diseño desde 0 de un software  <b>Vector-AI</b></p>
-                      <p><b>Indra sas</b></p>
-                      <p><b>Estimación Indra</b></p>`,
+        Description: `<ul>
+                        <li>
+                            <p>Nuevos desarrollos, mantenimiento y optimización de producto propio <b>Stockwatch</b>. Un software SaaS diseñado para la optimización logística de almacenamiento.</p>
+                        </li>
+                        <li>
+                            <p>Implementación desde 0 de un software para ejecutar scripts de <b>Inteligencia artificial en Python</b> junto a un front-end.</p>
+                        </li>
+                        <li>
+                            <p>Implementación y diseño completo desde 0 de <b>Vector-AI</b>. Un software de detección de errores mediante visión artificial.</p>
+                        </li>
+                        <li>
+                            <p>Team Lead de proyectos de <b>consultoria y desarrollo</b>, para software personalizados destinado a cliente final.</p>
+                        </li>
+                      </ul>`,
         InitialDate: new Date(2020, 9, 1),
         FinalDate: new Date(),
         borderTop: '#00abff',
@@ -23,8 +29,17 @@ export const roadmapData : roadMapInterface[] = [
         Technologies: ['Spring', 'Java 8', 'Angular JS'],
         Rol: 'FullStack Software Developer',
         CompanyName: 'Work4Data',
-        Description: 'Este seria un ejemplo de lo que hice en esta empresa',
-        Rol: 'Desarrollador backend',
+        Description: `<ul>
+                        <li>
+                            <p>Nuevas implementaciones, mejoras y corrección de errores de producto propio.</p>
+                        </li>
+                        <li>
+                            <p>Nuevas implementaciones, mejoras y corrección de errores de producto propio.</p>
+                        </li>
+                        <li>
+                            <p>Nuevas implementaciones, mejoras y corrección de errores de producto propio.</p>
+                        </li>
+                      </ul>`,
         InitialDate: new Date(2018, 9, 11),
         FinalDate: new Date(2020, 4, 1),
         borderTop: 'black',

@@ -1,6 +1,18 @@
-import { Chip, Typography } from '@mui/material';
+import { Avatar, Typography } from '@mui/material';
 import React from 'react';
 import styled from 'styled-components';
+import aws from '../../assets/images/aws.png'
+import spring from '../../assets/icons/spring.svg';
+import django from '../../assets/icons/django.svg';
+import docker from '../../assets/images/docker.png';
+import react from '../../assets/images/react.png';
+import python from '../../assets/icons/python.svg';
+import java from '../../assets/images/java.png';
+import angular from '../../assets/images/angular js.png';
+import javascript from '../../assets/images/javascript.png';
+import cobol from '../../assets/images/cobol.png';
+import db2 from '../../assets/images/db2.png';
+
 import { SectionContent } from '..';
 import { VerticalTimeline , VerticalTimelineElement } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
@@ -42,15 +54,36 @@ const RoadMap : React.FC<RoadMapProps> = ({title, dark, id}) => {
 
 									>
 										<VerticalTimelineSectionTechnologies>
-											{ data.Technologies.map(
-											(technology) => <ChipStyled label={technology} />)
+											{ data.Technologies.map((technology) => {
+																		const logo = technology.toLocaleLowerCase().includes('spring') ? spring :
+																					 technology.toLocaleLowerCase().includes('react') ? react :
+																					 technology.toLocaleLowerCase().includes('docker') ? docker :
+																					 technology.toLocaleLowerCase().includes('django') ? django :
+																					 technology.toLocaleLowerCase().includes('python') ? python :
+																					 technology.toLocaleLowerCase().includes('aws') ? aws :
+																					 technology.toLocaleLowerCase().includes('javascript') ? javascript :
+																					 technology.toLocaleLowerCase().includes('java') ? java :
+																					 technology.toLocaleLowerCase().includes('angular') ? angular :
+																					 technology.toLocaleLowerCase().includes('cobol') ? cobol :
+																					 technology.toLocaleLowerCase().includes('db2') ? db2 :
+																					 undefined;
+
+																		return <ChipStyled
+																			size={'medium'}
+																			label={technology}
+																			avatar={<Avatar alt={`${technology}`} 
+																						src={logo}
+																					/>}
+																			variant="outlined" />
+																		}
+												)
 											}
 										</VerticalTimelineSectionTechnologies>
 
 										<VerticalTimeLineTitle>{data.Rol}</VerticalTimeLineTitle>
 										<VerticalTimeLineSubTitle>{data.CompanyName}</VerticalTimeLineSubTitle>
 										<VerticalTimeLineContent dangerouslySetInnerHTML={{ __html: data.Description }}/>
-										</VerticalTimelineElement>
+									</VerticalTimelineElement>
 								); }
 							)}
 						</VerticalTimeline>

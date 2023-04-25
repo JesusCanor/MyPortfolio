@@ -3,17 +3,40 @@ import { Chip } from '@mui/material';
 
 
 const VerticalTimelineSectionTechnologies = styled.section `
+    overflow-x: scroll;
+    overflow-y: hidden;
+    box-sizing: border-box;
     display: flex;
     gap: 1rem;
-    justify-content: left;
-    ${props => props.theme.breakpoints.down("sm")} {
-        justify-content: center;
-    }
-    padding-bottom: 1vw;
+    justify-content: center;
+
+    margin-bottom: .5vw;
+    margin-top: .5vw;
+    padding: .5vh 0 .5vh 0;
     user-select: none;
+
+
+        
+    &::-webkit-scrollbar-thumb {
+        background-color: #9fa9bd;
+        border-radius: 5px;
+        transition: all 5s;
+        
+        &:hover {
+            background-color: gray;
+        }
+    }
+
+    &::-webkit-scrollbar {
+        height: .2rem;
+        border-radius: 5px;
+    }
+
+
 `
 
 const ChipStyled = styled(Chip) `
+    padding: .1rem;
     transition: all .2s !important;
     &:hover {
         transform: scale(1.1);
@@ -25,10 +48,11 @@ const VerticalTimeLineTitle = styled.h2 `
 `
 
 const VerticalTimeLineSubTitle = styled.h3 `
-    text-align: center;
+    text-align: left;
 `
 
 const VerticalTimeLineContent = styled.div `
+    padding-left: 2rem;
     text-align: left;
 `
 
