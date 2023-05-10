@@ -3,19 +3,18 @@ import { Chip } from '@mui/material';
 
 
 const VerticalTimelineSectionTechnologies = styled.section `
-    overflow-x: scroll;
-    overflow-y: hidden;
+    overflow-x: auto;
+    
     box-sizing: border-box;
     display: flex;
     gap: 1rem;
-    justify-content: center;
 
     margin-bottom: .5vw;
     margin-top: .5vw;
     padding: .5vh 0 .5vh 0;
     user-select: none;
 
-
+    padding: 1rem;
         
     &::-webkit-scrollbar-thumb {
         background-color: #9fa9bd;

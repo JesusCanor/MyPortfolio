@@ -10,7 +10,7 @@ export const roadmapData : roadMapInterface[] = [
                             <p>Nuevos desarrollos, mantenimiento y optimización de producto propio <b>Stockwatch</b>. Un software SaaS diseñado para la optimización logística de almacenamiento.</p>
                         </li>
                         <li>
-                            <p>Implementación desde 0 de un software para ejecutar scripts de <b>Inteligencia artificial en Python</b> junto a un front-end.</p>
+                            <p>Implementación desde 0 de un software para ejecutar scripts de <b>Inteligencia artificial en Python</b>.</p>
                         </li>
                         <li>
                             <p>Implementación y diseño completo desde 0 de <b>Vector-AI</b>. Un software de detección de errores mediante visión artificial.</p>
@@ -31,18 +31,12 @@ export const roadmapData : roadMapInterface[] = [
         CompanyName: 'Work4Data',
         Description: `<ul>
                         <li>
-                            <p>Nuevas implementaciones, mejoras y corrección de errores de producto propio.</p>
-                        </li>
-                        <li>
-                            <p>Nuevas implementaciones, mejoras y corrección de errores de producto propio.</p>
-                        </li>
-                        <li>
-                            <p>Nuevas implementaciones, mejoras y corrección de errores de producto propio.</p>
+                            <p>Nuevos desarrollos, optimizaciones y corrección de errores de producto propio, basado en contabilidad en sector bancario.</p>
                         </li>
                       </ul>`,
         InitialDate: new Date(2018, 9, 11),
         FinalDate: new Date(2020, 4, 1),
-        borderTop: 'black',
+        borderTop: '#00abff',
         iconColor: '#FFF',
         boxShadowIconColor: '#00abff',
     },
@@ -50,10 +44,14 @@ export const roadmapData : roadMapInterface[] = [
         Technologies: ['Spring', 'Java', 'JavaScript'],
         Rol: 'FullStack Software Developer',
         CompanyName: 'Neoris',
-        Description: 'Este seria un ejemplo de lo que hice en esta empresa',
+        Description: `<ul>
+                        <li>
+                            <p>Nuevos desarrollos y mantenimiento de aplicación de cliente del sector energético, basada en cola de eventos.</p>
+                        </li>
+                    </ul>`,
         InitialDate: new Date(2017, 9, 1),
         FinalDate: new Date(2018, 9, 1),
-        borderTop: 'black',
+        borderTop: '#00abff',
         iconColor: '#FFF',
         boxShadowIconColor: '#00abff',
     },
@@ -61,11 +59,15 @@ export const roadmapData : roadMapInterface[] = [
         Technologies: ['Cobol', 'DB2'],
         Rol: 'Backend Software Developer',
         CompanyName: 'Tecnilógica Accenture',
-        Description: '-Hice vinagre to flaman /n -Hice algo to flaman /n -Hice algo',
+        Description: `<ul>
+                        <li>
+                            <p>Nuevos desarrollos y resolución de problemas de aplicación interna de sector bancario </p>
+                        </li>
+                    </ul>`,
         InitialDate: new Date(2015, 7, 1),
         FinalDate: new Date(2017, 9, 1),
-        borderTop: 'black',
-        iconColor: 'black',
+        borderTop: '#00abff',
+        iconColor: '#FFF',
         boxShadowIconColor: '#00abff',
     },
 ]

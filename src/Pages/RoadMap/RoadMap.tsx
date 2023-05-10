@@ -69,6 +69,7 @@ const RoadMap : React.FC<RoadMapProps> = ({title, dark, id}) => {
 																					 undefined;
 
 																		return <ChipStyled
+																			key={data.CompanyName + technology}
 																			size={'medium'}
 																			label={technology}
 																			avatar={<Avatar alt={`${technology}`} 
