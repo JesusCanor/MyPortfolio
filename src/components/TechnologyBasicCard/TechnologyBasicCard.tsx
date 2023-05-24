@@ -37,14 +37,17 @@ const Image = styled.img`
 `
 
 export const WrapperCard = styled.section`
+	transition: .3s;
 	height: 30vh;
 	width: 15vw;
 	min-width: 300px;
 	min-height: 350px;
 	text-align: center;
-	border-radius: 50%;
 
 	&:hover {
+		transform: scale(1.01);
+		box-shadow: 0 20px 30px -10px rgba(255,255,255,.2);
+		border-radius: 10px;
 		${Image} {
 			transform: scale(1.05);
 		}

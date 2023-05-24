@@ -17,10 +17,10 @@ function App() {
     <ThemeProvider theme={theme}>
       <GlobalStyle theme={darkTheme ? darktheme : lighttheme}/>
         <Navbar/>
-        <About title="About me" dark={true} id="about" />
+        <About title="Sobre mi" dark={true} id="about" />
         <RoadMap title="RoadMap" dark={false} id="work"/>
-        <Skills title="Skills" dark={true} id="skills" />
-        <Contact title="Contact" dark={false} id="contact" />
+        <Skills title="Tecnologías" dark={true} id="skills" />
+        <Contact title="Contacto" dark={false} id="contact" />
     </ThemeProvider>
   )
 }

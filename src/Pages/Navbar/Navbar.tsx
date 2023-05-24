@@ -11,25 +11,25 @@ export interface NavbarInterface {}
 const links = [ //TODO esto hay que sacarlo a un fichero externo, o a BBDD.
 	{
 		id: "about",
-		text: "About me",
+		text: "Sobre mi",
 		icon: <InfoTwoTone fontSize="large"/>,
 		color: "#FFC445"
 	},
 	{
 		id: "work",
-		text: "My Work",
+		text: "RoadMap",
 		icon: <BuildTwoTone fontSize="large"/>,
 		color: "#000000"
 	},
 	{
 		id: "skills",
-		text: "Skills",
+		text: "Tecnologías",
 		icon: <EmojiObjectsTwoTone fontSize="large"/>,
 		color: "FFC445",
 	},
 	{
 		id: "contact",
-		text: "Get in touch",
+		text: "Contacto",
 		icon: <ContactMailTwoTone fontSize="large"/>,
 		color: "#8b77de",
 	},
