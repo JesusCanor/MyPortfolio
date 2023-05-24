@@ -42,6 +42,7 @@ const ListStyled = styled(List) `
         font-size: 1.2rem;
         font-weight: bold;
         margin-left: 1.5rem;
+        transition: all .2s;
     }
 
     & a:hover {

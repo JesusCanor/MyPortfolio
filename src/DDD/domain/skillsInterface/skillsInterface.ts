@@ -2,9 +2,8 @@ export interface SkillsInterface {
     Title: string;
     Description: string;
     RelatedTechs: RelatedTechs[];
-    Url: string;
-    ImageSrc: string;
     ExperienceTime: number;
+    color: string;
 }
 
 interface RelatedTechs { 

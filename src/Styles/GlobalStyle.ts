@@ -14,7 +14,7 @@ export const GlobalStyles = createGlobalStyle<{theme: DefaultTheme}>`
   export default GlobalStyles;
 
 const SectionContent = styled.div `
-  max-width: 80vw;
+  max-width: 90vw;
   margin: 0 auto;
   padding: 3rem;
   user-select:none;

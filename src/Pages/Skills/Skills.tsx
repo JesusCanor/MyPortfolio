@@ -1,34 +1,63 @@
-import { Card, CardMedia, Grid, Typography } from '@mui/material';
+import { Card, Grid, Typography } from '@mui/material';
 import React from 'react';
 import styled from 'styled-components';
 import { SectionContent } from '..';
 import { skillsData } from '../../assets/MemoryData/skillsData';
 import { SkillsInterface } from '../../DDD/domain';
 import { TechnologyCard } from '../../components/TechnologyCard';
+import CountUp from 'react-countup';
+import { TechnologyBasicCard } from '../../components/TechnologyBasicCard';
+
+import aws from '../../assets/images/aws.png'
+import spring from '../../assets/icons/spring.svg';
+import django from '../../assets/icons/django.svg';
+import docker from '../../assets/images/docker.png';
+import react from '../../assets/images/react.png';
+import python from '../../assets/icons/python.svg';
+import java from '../../assets/images/java.png';
+import angular from '../../assets/images/angular js.png';
+import javascript from '../../assets/images/javascript.png';
+import cobol from '../../assets/images/cobol.png';
+import db2 from '../../assets/images/db2.png';
+import mongodb from '../../assets/images/mongodb.png';
+import postgresql from '../../assets/images/postgresql.png';
 
 export interface SkillsProps { title: string, dark: boolean, id: string }
 
 const Skills : React.FC<SkillsProps> = ({ title, dark, id }) => {
+
+	const selectIcon = (name: string) => {
+		return name.toLocaleLowerCase().includes('spring') ? spring :
+				name.toLocaleLowerCase().includes('react') ? react :
+				name.toLocaleLowerCase().includes('docker') ? docker :
+				name.toLocaleLowerCase().includes('django') ? django :
+				name.toLocaleLowerCase().includes('python') ? python :
+				name.toLocaleLowerCase().includes('aws') ? aws :
+				name.toLocaleLowerCase().includes('javascript') ? javascript :
+				name.toLocaleLowerCase().includes('java') ? java :
+				name.toLocaleLowerCase().includes('angular') ? angular :
+				name.toLocaleLowerCase().includes('cobol') ? cobol :
+				name.toLocaleLowerCase().includes('db2') ? db2 :
+				name.toLocaleLowerCase().includes('sql') ? postgresql :
+				name.toLocaleLowerCase().includes('mongodb') ? mongodb :
+				undefined;
+	}
+
 	return (
 			<SkillsStyle dark={dark}>
 				<SectionContent id={id}>
 					<Typography variant="h3">{title}</Typography>
-					+8 years of experience
-					<Grid container>
-						{ skillsData.map((data: SkillsInterface, index) => {
-								return (
-									<Grid item key={index} xs={12} sm={6} md={4}>
-										<TechnologyCard/>
-										{ <CardSkillsStyle>
-											<CardMedia style={{'height': '5rem', 'width': '5rem', 'margin': '1rem', }} title={data.Title} image={data.ImageSrc}/>
-											<h1>{data.Title}</h1>
-											<p>{data.Description}</p>
-										</CardSkillsStyle> }
-									</Grid>
-								)
-							})
-						}
-					</Grid>
+					<p>+ <CountUp start={0} end={8} duration={3} style={{color: '#00abff', fontWeight: 'bold', fontSize: '2rem'}}/> años de experiencia relacionados con proyectos software </p>
+						<Grid container gap={10} xs={12} md={12} xl={12} justifyContent={"center"} paddingTop={"3rem"} paddingBottom={"3rem"}>
+							{ skillsData.map((data: SkillsInterface, index) => 
+									<TechnologyBasicCard
+										icon={selectIcon(data.Title)}
+										color={data.color}
+										name={data.Title}
+										description={data.Description}
+										time={data.ExperienceTime} />
+							)}
+						</Grid>
 				</SectionContent>
 			</SkillsStyle>
 			)
@@ -49,8 +78,8 @@ export const SkillsStyle = styled.div<SkillsStyledProps>`
 export const CardSkillsStyle = styled(Card)`
 	margin: 2rem;
 	border-radius: 10rem;
-	min-height: 15vh;
-	min-width: 15vw;
+	min-height: 350px;
+	min-width: 300px;
 `;
 
 

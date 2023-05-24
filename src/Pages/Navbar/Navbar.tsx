@@ -12,22 +12,26 @@ const links = [ //TODO esto hay que sacarlo a un fichero externo, o a BBDD.
 	{
 		id: "about",
 		text: "About me",
-		icon: <InfoTwoTone fontSize="large"/>
+		icon: <InfoTwoTone fontSize="large"/>,
+		color: "#FFC445"
 	},
 	{
 		id: "work",
 		text: "My Work",
-		icon: <BuildTwoTone fontSize="large"/>
+		icon: <BuildTwoTone fontSize="large"/>,
+		color: "#000000"
 	},
 	{
 		id: "skills",
 		text: "Skills",
-		icon: <EmojiObjectsTwoTone fontSize="large"/>
+		icon: <EmojiObjectsTwoTone fontSize="large"/>,
+		color: "FFC445",
 	},
 	{
 		id: "contact",
 		text: "Get in touch",
-		icon: <ContactMailTwoTone fontSize="large"/>
+		icon: <ContactMailTwoTone fontSize="large"/>,
+		color: "#8b77de",
 	},
 ];
 
@@ -63,7 +67,7 @@ const Navbar : React.FC<NavbarInterface> = () => {
 				</CancelIconButtonStyled>
 				<Divider/>
 				{
-					links.map(({id, text, icon}, index) => (
+					links.map(({id, text, icon, color}, index) => (
 						<LinkSidebarStyled key={index}
 							to={id}
 							spy={true} 
@@ -73,7 +77,7 @@ const Navbar : React.FC<NavbarInterface> = () => {
 							offset={-70}>
 							<ListItem component="h4">
 								<span>
-									<ListItemIcon>
+									<ListItemIcon >
 										{icon}
 									</ListItemIcon>
 								</span>{text}
