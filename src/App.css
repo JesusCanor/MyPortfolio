@@ -46,3 +46,11 @@
 .vertical-timeline {
   max-width: 100% !important;
 }
+
+.MuiOutlinedInput-notchedOutline{
+  border-color: #00ABFF !important;
+}
+
+.MuiButton-root {
+  background-color: #00ABFF !important;
+}

@@ -13,13 +13,15 @@
     "@emotion/styled": "^11.10.6",
     "@mui/icons-material": "^5.11.9",
     "@mui/material": "^5.11.10",
+    "formik": "^2.4.0",
     "react": "^18.2.0",
     "react-countup": "^6.4.2",
     "react-dom": "^18.2.0",
     "react-scroll": "^1.8.9",
     "react-typewriter-effect": "^1.1.0",
     "react-vertical-timeline-component": "^3.6.0",
-    "styled-components": "^5.3.6"
+    "styled-components": "^5.3.6",
+    "yup": "^1.2.0"
   },
   "devDependencies": {
     "@types/react": "^18.0.27",
