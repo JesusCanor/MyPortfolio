@@ -14,7 +14,6 @@ const Contact : React.FC<ContactInterface> = ({title, dark, id}) => {
 		initialValues: {
 			name: "",
 			email: "",
-			type: 4,
 			message: ""
 		},
 		validationSchema: Yup.object({
@@ -59,9 +58,9 @@ const Contact : React.FC<ContactInterface> = ({title, dark, id}) => {
 							rows={5}
 							name="message"
 							onBlur={handleBlur}
-							onChange={handleChange('message')}  error={touched.message && !!errors.message} helperText={ touched.message && errors.message}
+							onChange={handleChange('message')}  error={touched.message && !!errors.message} helperText={ touched.message &&errors.message}
 						/>
-						<Button disabled={!!errors.email || !!errors.name || !!errors.message} variant='contained'>Enviar</Button>
+						<Button disabled={(!!errors.email || !!errors.name || !!errors.message) || Object.keys(touched).length == 0} variant='contained'>Enviar</Button>
 					</FormStyled>
 				</SectionContent>
 			</ContactStyle>
