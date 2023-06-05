@@ -10,7 +10,7 @@ export interface ContactInterface { title: string, dark: boolean, id: string }
 const Contact : React.FC<ContactInterface> = ({title, dark, id}) => {
 	const [motivo, setMotivo] = useState(4);
 
-	const {errors, touched, handleSubmit, values, handleChange, dirty} = useFormik({
+	const {errors, touched, handleSubmit, handleBlur, handleChange} = useFormik({
 		initialValues: {
 			name: "",
 			email: "",
@@ -34,15 +34,18 @@ const Contact : React.FC<ContactInterface> = ({title, dark, id}) => {
 					<FormStyled onSubmit={handleSubmit}>
 						<h1 style={{padding: '.5rem'}}>Hablemos :D</h1>
 						<TextField id="outlined-basic" label="Tú nombre completo" variant="outlined" name="name" 
-									onChange={handleChange('name')} error={!!errors.name} helperText={errors.name}/>
+									onChange={handleChange('name')} onBlur={handleBlur}
+									error={touched.name && !!errors.name} helperText={touched.name && errors.name}/>
 						<TextField id="outlined-basic" label="Tú email" variant="outlined" name="email" 
-									onChange={handleChange('email')}  error={!!errors.email} helperText={errors.email}/>
+									onChange={handleChange('email')} onBlur={handleBlur}
+									error={touched.email && !!errors.email} helperText={touched.email && errors.email}/>
 						<Select
 								labelId="simple-select-label"
 								id="simple-select"
 								label="Motivo del contacto"
 								name="type"
-								onChange={handleChange}
+								value={motivo}
+								onChange={handleChange('motivo')}
 							>
 								<MenuItem value={1}>Oferta laboral</MenuItem>
 								<MenuItem value={2}>Desarrollo personalizado</MenuItem>
@@ -55,7 +58,8 @@ const Contact : React.FC<ContactInterface> = ({title, dark, id}) => {
 							multiline
 							rows={5}
 							name="message"
-							onChange={handleChange('message')}  error={!!errors.message} helperText={errors.message}
+							onBlur={handleBlur}
+							onChange={handleChange('message')}  error={touched.message && !!errors.message} helperText={ touched.message && errors.message}
 						/>
 						<Button disabled={!!errors.email || !!errors.name || !!errors.message} variant='contained'>Enviar</Button>
 					</FormStyled>
