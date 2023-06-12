@@ -13,19 +13,19 @@ const links = [ //TODO esto hay que sacarlo a un fichero externo, o a BBDD.
 		id: "about",
 		text: "Sobre mi",
 		icon: <InfoTwoTone fontSize="large"/>,
-		color: "#FFC445"
+		color: "#00abff",
 	},
 	{
 		id: "work",
 		text: "RoadMap",
 		icon: <BuildTwoTone fontSize="large"/>,
-		color: "#000000"
+		color: "black",
 	},
 	{
 		id: "skills",
 		text: "Tecnologías",
 		icon: <EmojiObjectsTwoTone fontSize="large"/>,
-		color: "FFC445",
+		color: "#FFC445",
 	},
 	{
 		id: "contact",
@@ -68,16 +68,18 @@ const Navbar : React.FC<NavbarInterface> = () => {
 				<Divider/>
 				{
 					links.map(({id, text, icon, color}, index) => (
-						<LinkSidebarStyled key={index}
+						<LinkSidebarStyled
+							key={index}
 							to={id}
 							spy={true} 
 							activeClass="active" 
 							smooth={true} 
 							duration={500} 
-							offset={-70}>
+							offset={-70}
+							color={color}>
 							<ListItem component="h4">
 								<span>
-									<ListItemIcon >
+									<ListItemIcon>
 										{icon}
 									</ListItemIcon>
 								</span>{text}

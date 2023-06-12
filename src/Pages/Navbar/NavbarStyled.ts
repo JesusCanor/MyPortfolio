@@ -9,7 +9,7 @@ const ImgLogoStyled = styled.img`
     &:hover { cursor: pointer }
 `
 
-const AppBarStyled = styled.div ` //Instead Appbar because doesn't work. Replace Text in next component
+const AppBarStyled = styled.div `
     position: sticky;
     top: 0;
     bottom: 0;
@@ -34,7 +34,6 @@ const IconButtonStyled = styled(IconButton) `
     }
 `
 
- // margin-left : TODO ${theme.spacing(3)};
 const ListStyled = styled(List) `
     & a {
         user-select: none;
@@ -57,9 +56,14 @@ const ListStyled = styled(List) `
 `
 
 const LinkSidebarStyled = styled(Link) `
+
     width: 30vw;
     ${props => props.theme.breakpoints.down("sm")} {
         width: 45vw;
+    }
+
+    & svg {
+        transition: all .2s;
     }
 
     & h4 { 
@@ -67,15 +71,34 @@ const LinkSidebarStyled = styled(Link) `
         fontWeight: bold;
 
         &:hover {
+            color: ${props => props.color ? props.color : ""};
             cursor: pointer;
+
+            a {
+                trasnform: scale(1.1);
+            }
+
+            & svg {
+                transform: scale(1.1);
+                color: ${props => props.color ? props.color : ""}
+            }
         }
      }
 `
 
-const CancelIconButtonStyled = styled(IconButton) `
-     justify-content: right !important;
+const CancelIconButtonStyled = styled.section `
+    padding: 0.5rem;
+    display: flex;
+    align-self: self-end;
 
-     & svg:hover { color: red;}
+     & svg { 
+        transition: all .2s; 
+        &:hover {
+            color: red;
+            transform: scale(1.1);
+            cursor: pointer;
+        }
+    }
 `
 
 export { ImgLogoStyled, AppBarStyled, ToolbarStyled, ListStyled, IconButtonStyled, LinkSidebarStyled, CancelIconButtonStyled }
