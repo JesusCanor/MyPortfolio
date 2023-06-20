@@ -44,7 +44,7 @@ const Contact : React.FC<ContactInterface> = ({title, dark, id}) => {
 								label="Motivo del contacto"
 								name="type"
 								value={motivo}
-								onChange={handleChange('motivo')}
+								onChange={() =>handleChange('motivo')}
 							>
 								<MenuItem value={1}>Oferta laboral</MenuItem>
 								<MenuItem value={2}>Desarrollo personalizado</MenuItem>

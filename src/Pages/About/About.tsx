@@ -3,8 +3,9 @@ import React from 'react';
 import { SectionContent } from '../index';
 import { AboutStyled, CardContentStyled, CardMediaStyled, CardStyled, PDFButton } from './AboutStyled';
 import image from '../../assets/images/retrato.jpg'
+//@ts-ignore
 import TypeWriterEffect from 'react-typewriter-effect';
-import { useTheme } from 'styled-components';
+import { useTheme } from '@mui/material';
 
 export interface AboutInterface { title: string, dark: boolean, id: string }
 
@@ -16,7 +17,7 @@ const About : React.FC<AboutInterface> = ({ title, dark, id }) => {
 			<SectionContent id={id}>
 				<Typography variant="h3">{title}</Typography>
 				<CardStyled>
-					<CardMediaStyled title="picture" image={image}/>
+					{/* <CardMediaStyled title="picture" image={image}/> */}
 					<CardContentStyled>
 						<TypeWriterEffect 
 							text="Buenas! Soy Jesús Cano"
@@ -36,14 +37,14 @@ const About : React.FC<AboutInterface> = ({ title, dark, id }) => {
 							diferentes equipos de diferentes tamaños, y de diferentes disciplinas.
 							Actualmente estoy formándome en como aplicar correctamente la arquitectura hexagonal en Frontend y Backend
 						</Typography>
-						<CardActions>
+					</CardContentStyled>
+					<CardActions>
 						<PDFButton variant="contained">
 							<a href="http://google.com" download>
 								Download CV
 							</a>
 						</PDFButton>
 					</CardActions>
-					</CardContentStyled>
 				</CardStyled>
 			</SectionContent>
 		</AboutStyled>)

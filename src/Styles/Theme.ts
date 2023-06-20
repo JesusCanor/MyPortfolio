@@ -14,9 +14,9 @@ const darkTheme = {
 export { lightTheme, darkTheme }
 
 
-import { createTheme } from "@mui/material";
+import { Theme, createTheme } from "@mui/material";
 
-const theme = createTheme({
+const theme: Theme = createTheme({
     palette: {
         primary: {
             main: "#00abff",
