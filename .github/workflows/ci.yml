@@ -36,7 +36,6 @@ jobs:
         username: ${{ secrets.USERNAME }}
         password: ${{ secrets.PASSWORD }}
         port: ${{ secrets.PORT }}
-        port: 22
         script: |
           cd ~/home/danielwetan/apps/node1
           git pull origin master
