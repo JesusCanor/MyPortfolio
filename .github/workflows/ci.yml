@@ -47,7 +47,5 @@ jobs:
           password: Obuu2023
           port: 22
           script: |
-            cd github/portfolio/docker
-            sh compose.sh
-
-        
+            cd github/portfolio/
+            sh init.sh

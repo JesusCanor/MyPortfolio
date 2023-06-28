@@ -20,14 +20,14 @@ const About : React.FC<AboutInterface> = ({ title, dark, id }) => {
 					{/* <CardMediaStyled title="picture" image={image}/> */}
 					<CardContentStyled>
 						<TypeWriterEffect 
-							text="Buenas! Soy Jesús Cano"
+							text="Buenas! Soy Jesús Cano y es un test"
 							textStyle={{fontSize: "2rem", fontWeight: "700px", color: theme.palette.primary.main}}
 							startDelay={250}
 							cursorColor={theme.palette.primary.main}
 							typeSpeed={50}/>
 
 						<TypeWriterEffect 
-							text="Desarrollador Fullstack especializado en Java con Spring y ReactJS"
+							text="Desarrollador Fullstack especializado en Java con Spring y ReactJS."
 							textStyle={{fontSize: "1.2rem", fontWeight: "500px"}}
 							startDelay={2500}
 							cursorColor="black"
