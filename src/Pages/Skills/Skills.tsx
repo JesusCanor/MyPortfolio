@@ -1,4 +1,4 @@
-import { Card, Grid, Typography } from '@mui/material';
+import { Card, Grid, ListItem, Typography } from '@mui/material';
 import React from 'react';
 import styled from 'styled-components';
 import { SectionContent } from '..';
@@ -48,14 +48,15 @@ const Skills : React.FC<SkillsProps> = ({ title, dark, id }) => {
 				<SectionContent id={id}>
 					<Typography variant="h3">{title}</Typography>
 					<p>+ <CountUp start={0} end={8} duration={3} style={{color: '#00abff', fontWeight: 'bold', fontSize: '2rem'}}/> años de experiencia relacionados con proyectos software </p>
-						<Grid container gap={10} xs={12} md={12} xl={12} justifyContent={"center"} paddingTop={"3rem"} paddingBottom={"3rem"}>
+						<Grid item container gap={10} xs={12} md={12} xl={12} justifyContent={"center"} paddingTop={"3rem"} paddingBottom={"3rem"}>
 							{ skillsData.map((data: SkillsInterface, index) => 
-									<TechnologyBasicCard
-										icon={selectIcon(data.Title)}
-										color={data.color}
-										name={data.Title}
-										description={data.Description}
-										time={data.ExperienceTime} />
+								<TechnologyBasicCard
+									key={index}
+									icon={selectIcon(data.Title)}
+									color={data.color}
+									name={data.Title}
+									description={data.Description}
+									time={data.ExperienceTime} />
 							)}
 						</Grid>
 				</SectionContent>

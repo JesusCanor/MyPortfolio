@@ -1,4 +1,4 @@
-import { Button, Card, CardContent, CardMedia } from '@mui/material';
+import { Card, CardContent, CardMedia, Button } from '@mui/material';
 import styled from 'styled-components';
 
 interface AboutStyledProps {
@@ -12,23 +12,21 @@ export const AboutStyled = styled.div<AboutStyledProps>`
 `;
 
 const CardStyled = styled(Card) `
-    height: 70vh;
-    display: flex;
-    margin-top: 5vh;//TODO theme.spaceing(6)
-    position: relative; //TODO TOUNDERSTAND
+    max-width: 65vw;
+    margin: 5vh auto;
 `
 
 const CardMediaStyled = styled(CardMedia)`
-    width: 450px;
+    // width: 450px;
     height: auto;
-    objectFit: cover;
+    // objectFit: cover;
     border-radius: 20px;
     margin: 3vh; //TODO TOUNDERSTAND theme.spacing(6);
 `
 
-const CardContentStyled = styled(CardContent) `
+const CardContentStyled = styled(CardContent) ` 
     margin-top: 1.5rem; //theme.spacing(2); //TODO
-    max-width: 47vw;
+    margin: 2rem;
     & h6 {
         margin-top: 1.5rem; //theme.spacing(2); //TODO TOUNDERSTAND
         ${props => props.theme.breakpoints.down("sm")} {
@@ -37,18 +35,14 @@ const CardContentStyled = styled(CardContent) `
     }
 `
 
-const PDFButton = styled(Button) `
-    position: absolute !important;
-    right: 17rem;
-    bottom: 10rem;
+const PDFButton = styled(Button)` //Todo esto está
+    padding: 1.5rem !important; //theme.spacing(3)
+    margin: 3rem 0rem 2rem 0rem !important;
 
     ${props => props.theme.breakpoints.down("sm")} {
-        right: 4rem;
-        bottom: 5rem;
     }
 
     background-color: ${props => props.theme.palette.primary.main} !important;
-    padding: 1.5rem !important; //theme.spacing(3)
     
     & a { 
         color: white !important; 
@@ -58,7 +52,6 @@ const PDFButton = styled(Button) `
     &:hover {
         background-color: white !important;
         & a { color: ${props => props.theme.palette.primary.main} !important; }
-
     }
 `
 

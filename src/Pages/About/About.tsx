@@ -20,13 +20,13 @@ const About : React.FC<AboutInterface> = ({ title, dark, id }) => {
 					{/* <CardMediaStyled title="picture" image={image}/> */}
 					<CardContentStyled>
 						<TypeWriterEffect 
-							text="Buenas! Soy Jesús Cano y es un test"
+							text="Buenas! Soy Jesús Cano"
 							textStyle={{fontSize: "2rem", fontWeight: "700px", color: theme.palette.primary.main}}
 							startDelay={250}
 							cursorColor={theme.palette.primary.main}
 							typeSpeed={50}/>
-
 						<TypeWriterEffect 
+							
 							text="Desarrollador Fullstack especializado en Java con Spring y ReactJS."
 							textStyle={{fontSize: "1.2rem", fontWeight: "500px"}}
 							startDelay={2500}
@@ -37,14 +37,12 @@ const About : React.FC<AboutInterface> = ({ title, dark, id }) => {
 							diferentes equipos de diferentes tamaños, y de diferentes disciplinas.
 							Actualmente estoy formándome en como aplicar correctamente la arquitectura hexagonal en Frontend y Backend
 						</Typography>
-					</CardContentStyled>
-					<CardActions>
 						<PDFButton variant="contained">
 							<a href="http://google.com" download>
 								Download CV
 							</a>
 						</PDFButton>
-					</CardActions>
+					</CardContentStyled>
 				</CardStyled>
 			</SectionContent>
 		</AboutStyled>)
